@@ -1,0 +1,20 @@
+<div class="input-group has-validation">
+  <span class="input-group-btn">
+    <button (click)="changeValue(-5)" [ngClass]="btnClass" type="button">
+      <i class="fa fa-minus"></i>
+    </button>
+  </span>
+  <input
+    type="number"
+    class="form-control"
+    placeholder="Progress"
+    [class.is-invalid]="getInvalid"
+    [(ngModel)]="progress"
+    (ngModelChange)="onChange($event)"
+  />
+  <span class="input-group-btn">
+    <button (click)="changeValue(5)" [ngClass]="btnClass" type="button">
+      <i class="fa fa-plus"></i>
+    </button>
+  </span>
+</div>

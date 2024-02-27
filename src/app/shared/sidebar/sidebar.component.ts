@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SidebarService } from 'src/app/services/sidebar.service';
 
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class SidebarComponent {
+export class SidebarComponent implements OnInit {
+  menuItems: any[] = [];
 
+  constructor(private sideBarService: SidebarService) {
+    this.menuItems = sideBarService.menu;
+  }
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 }
