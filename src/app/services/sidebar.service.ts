@@ -22,6 +22,14 @@ export class SidebarService {
           title: 'Graphics',
           url: 'chart'
         },
+        {
+          title: 'Promises',
+          url: 'promises'
+        },
+        {
+          title: 'RxJs',
+          url: 'rxjs'
+        },
       ]
     }
   ]
